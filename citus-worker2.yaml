@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: citus-worker2
+spec:
+  containers:
+  - name: worker2
+    image: citusdata/citus
+    ports:
+    - containerPort: 5432
+    env:
+    - name: POSTGRES_PASSWORD
+      value: "mypassword"
+  
